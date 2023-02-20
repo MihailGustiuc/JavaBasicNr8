@@ -4,6 +4,11 @@ public class Person {
    private String name;
    private String address;
 
+    public Person(String name, String address) {
+        this.address= address;
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -16,18 +21,9 @@ public class Person {
         this.address = address;
     }
 
-    public Person(String name, String address){
+   public String toString() {
+        return "Person: " + name +", " + address;
 
    }
-   public Person(){
-
-   }
-
-   public String toString(){
-
-       return ("Nicolae, Vasile Lupu 62");
-   }
-
-
 
 }

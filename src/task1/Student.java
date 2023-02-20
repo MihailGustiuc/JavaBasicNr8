@@ -1,24 +1,20 @@
 package task1;
 
-import java.util.PrimitiveIterator;
 
-public class Student extends Person{
-     private String name;
-     private int year;
-     private double fee;
+public class Student extends Person {
+    private String program;
+    private int year;
+    private double fee;
 
-     public Student(String name,String adress,String program,int year,double fee){
+    public Student(String name, String address, String program, int year, double fee) {
+        super(name,address);
+        this.program=program;
+        this.year = year;
+        this.fee = fee;
 
-     }
 
-    @Override
-    public String getName() {
-        return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getYear() {
         return year;
@@ -34,5 +30,9 @@ public class Student extends Person{
 
     public void setFee(double fee) {
         this.fee = fee;
+    }
+
+    public String toString() {
+        return "Student: " + getName() + ", " + getAddress() + ", " + program + ", " + year + ", " + fee;
     }
 }
